@@ -1,12 +1,12 @@
 {
-  "name": "StoryboardPro",
-  "short_name": "StoryboardPro",
-  "description": "A powerful storyboarding app",
+  "name": "SB Tool",
+  "short_name": "SB Tool",
+  "description": "A powerful SB Tool app",
   "start_url": "./index.html",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#f8fafc",
+  "background_color": "#f9f9f9",
+  "theme_color": "#f9f9f9",
   "orientation": "natural",
   "categories": ["productivity", "utilities"],
   "icons": [
