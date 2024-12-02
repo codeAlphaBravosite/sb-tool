@@ -67,18 +67,18 @@ convertButton.addEventListener('click', async () => {
     const text = scriptInput.value.trim();
     
     if (!text) {
-        updateStatus('⚠️ Please enter some text before converting.', true);
+        updateStatus('Please enter some text before converting.', true);
         return;
     }
 
     convertButton.disabled = true;
-    updateStatus('🔄 Converting your script...');
+    updateStatus('Converting your script...');
 
     try {
         const scenes = breakIntoScenes(text);
         const csvString = arrayToCSV(scenes);
         downloadCSV(csvString);
-        updateStatus('✅ Conversion complete! Download started.');
+        updateStatus('Conversion complete! Download started.');
     } catch (error) {
         console.error('Conversion error:', error);
         updateStatus(`❌ Error: ${error.message}`, true);
