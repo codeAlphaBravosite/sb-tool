@@ -67,7 +67,7 @@ convertButton.addEventListener('click', async () => {
     const text = scriptInput.value.trim();
     
     if (!text) {
-        updateStatus('Please enter some text before converting.', true);
+        updateStatus('Please enter your script before converting.', true);
         return;
     }
 
