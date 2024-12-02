@@ -1,5 +1,5 @@
 const VERSION = '1.0.1';
-const CACHE_NAME = `storyboard-cache-${VERSION}`;
+const CACHE_NAME = `sbtool-cache-${VERSION}`;
 
 const STATIC_CACHE_URLS = [
   './',
@@ -22,7 +22,7 @@ self.addEventListener('activate', event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
-          if (cacheName.startsWith('storyboard-cache-') && cacheName !== CACHE_NAME) {
+          if (cacheName.startsWith('sbtool-cache-') && cacheName !== CACHE_NAME) {
             return caches.delete(cacheName);
           }
         })
