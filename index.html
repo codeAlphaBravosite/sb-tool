@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script to Scene Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Script to Scene Converter</h1>
+        <p class="instructions">
+            Paste your script below
+        </p>
+        <textarea 
+            id="scriptInput" 
+            placeholder="Enter your script here..."
+            spellcheck="false"
+            aria-label="Script input"
+        ></textarea>
+        <button id="convertButton">Convert Now</button>
+        <div id="status" role="status" aria-live="polite"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
