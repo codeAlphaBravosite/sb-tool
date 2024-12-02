@@ -78,7 +78,7 @@ convertButton.addEventListener('click', async () => {
         const scenes = breakIntoScenes(text);
         const csvString = arrayToCSV(scenes);
         downloadCSV(csvString);
-        updateStatus('Conversion complete! Download started.');
+        updateStatus('Conversion complete!');
     } catch (error) {
         console.error('Conversion error:', error);
         updateStatus(`❌ Error: ${error.message}`, true);
