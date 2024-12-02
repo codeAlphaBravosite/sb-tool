@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Script to Scene Converter</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./icon-192x192.png" type="image/png">
+    <link rel="shortcut icon" href="./icon-192x192.png" type="image/png">
+    <link rel="apple-touch-icon" href="./icon-192x192.png">
+    <link rel="manifest" href="./manifest.webmanifest">
 </head>
 <body>
     <div class="container">
         <h1></h1>
-        <p class="instructions">
-            
+        <p class="instructions">            
         </p>
         <textarea 
             id="scriptInput" 
@@ -22,5 +25,18 @@
         <div id="status" role="status" aria-live="polite"></div>
     </div>
     <script src="script.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(registration => {
+          console.log('Service Worker registered successfully:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+    });
+  }
+    </script>
 </body>
 </html>
