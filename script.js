@@ -9,8 +9,8 @@ function breakIntoScenes(text) {
 
     const scenes = text.split('।')
         .map(s => s.trim())
-        .filter(s => s)
-        .map(s => s + '।');
+        .filter(s => s);
+        //.map(s => s + '।');
     
     if (scenes.length === 0) {
         throw new Error('No valid scenes found in the input text');
