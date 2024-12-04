@@ -55,7 +55,7 @@ function breakIntoScenes(text) {
     }
 
     // Create storyboard in the same format as storage.js
-    const storyboard = createStoryboard('Created via SB Tool');
+    const storyboard = createStoryboard('Created via script');
     storyboard.scenes = sceneTexts.map((text, index) => {
         const scene = createScene(index + 1);
         scene.voScript = text;
@@ -127,7 +127,7 @@ convertButton.addEventListener('click', async () => {
         const scenes = breakIntoScenes(text);
         // const csvString = arrayToCSV(scenes);
         // downloadCSV(csvString);
-        updateStatus('Converted and Storyboard created successfully! (go to ⧉ StoryboardPro and refresh)');
+        updateStatus('Successfully Created! (go to ⧉StoryboardPro and refresh)');
     } catch (error) {
         console.error('Conversion error:', error);
         updateStatus(`❌ Error: ${error.message}`, true);
