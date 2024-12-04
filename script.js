@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'storyboards'; // Using the same key as storage.js
+const STORAGE_KEY = 'storyboards';
 const scriptInput = document.getElementById('scriptInput');
 const convertButton = document.getElementById('convertButton');
 const statusElement = document.getElementById('status');
@@ -70,6 +70,7 @@ function breakIntoScenes(text) {
     return sceneTexts;
 }
 
+/* CSV Download functionality - commented out but preserved for future use
 function arrayToCSV(scenes) {
     const BOM = '\uFEFF';
     const header = ['Scene Number', 'VO/Script', 'Files', 'Notes'];
@@ -106,6 +107,7 @@ function downloadCSV(csvString, filename = 'script_breakdown.csv') {
         URL.revokeObjectURL(url);
     }
 }
+*/
 
 function updateStatus(message, isError = false) {
     statusElement.textContent = message;
@@ -123,9 +125,9 @@ convertButton.addEventListener('click', async () => {
     updateStatus('Converting your script...');
     try {
         const scenes = breakIntoScenes(text);
-        const csvString = arrayToCSV(scenes);
-        downloadCSV(csvString);
-        updateStatus('Converted and saved! Download started automatically.');
+        // const csvString = arrayToCSV(scenes);
+        // downloadCSV(csvString);
+        updateStatus('Converted and Scenes created successfully!');
     } catch (error) {
         console.error('Conversion error:', error);
         updateStatus(`❌ Error: ${error.message}`, true);
