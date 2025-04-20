@@ -130,7 +130,7 @@ convertButton.addEventListener('click', async () => {
         updateStatus('Successfully Created! (go to ⧉StoryboardPro and refresh)');
     } catch (error) {
         console.error('Conversion error:', error);
-        updateStatus(`❌ Error: ${error.message}`, true);
+        updateStatus(`Error: ${error.message}`, true);
     } finally {
         convertButton.disabled = false;
     }
